@@ -76,26 +76,26 @@
     },
     {
         "id": 6,
-        "name": "karen",
-        "lastName": "romero",
-        "email": "karen@gmail.com",
-        "pass": "$2a$12$W6FOFev7RxFsXJKi6Y49FemmG3TTASgMOlFBVFJMqaeCvPKdy8Q7S",
+        "name": "carlos",
+        "lastName": "lavado",
+        "email": "carloslaado@gmail.com",
+        "pass": "$2a$12$q8vuXPO78YZpr3gqD2yXI.vIawFv6xgfBLDMI/25EdPLmTJKEyI2a",
         "limitInv": 0,
         "usersInv": [
-            "jason",
-            "carlos"
+            "sebastian",
+            "karen"
         ],
         "funds": {
             "user1": {
-                "name": "karen",
+                "name": "carlos",
                 "amount": 0
             },
             "user2": {
-                "name": "jason",
+                "name": "sebastian",
                 "amount": 0
             },
             "user3": {
-                "name": "carlos",
+                "name": "karen",
                 "amount": 0
             }
         }

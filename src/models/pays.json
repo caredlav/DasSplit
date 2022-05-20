@@ -120,5 +120,113 @@
             },
             "status": "saldado"
         }
+    },
+    {
+        "accountID": 5,
+        "compromiso": {
+            "invoice": 7,
+            "debe": {
+                "name": "seba",
+                "amount": 100000
+            },
+            "esperando": {
+                "name": "mac"
+            },
+            "nota": {
+                "razon": "nota de ejemplo",
+                "fecha": "2022-05-20"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 6,
+        "compromiso": {
+            "invoice": 8,
+            "debe": {
+                "name": "carlos",
+                "amount": 0
+            },
+            "esperando": {
+                "name": "sebastian"
+            },
+            "nota": {
+                "razon": "ejemplo del dia.",
+                "fecha": "2022-05-20"
+            },
+            "status": "pendiente"
+        }
+    },
+    {
+        "accountID": 6,
+        "compromiso": {
+            "invoice": 9,
+            "debe": {
+                "name": "carlos",
+                "amount": 250000
+            },
+            "esperando": {
+                "name": "karen"
+            },
+            "nota": {
+                "razon": "otra nota",
+                "fecha": "2022-05-20"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 6,
+        "compromiso": {
+            "invoice": 10,
+            "debe": {
+                "name": "karen",
+                "amount": 5000
+            },
+            "esperando": {
+                "name": "sebastian"
+            },
+            "nota": {
+                "razon": "otra nota de ejemplo.",
+                "fecha": "2022-05-20"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 6,
+        "compromiso": {
+            "invoice": 11,
+            "debe": {
+                "name": "sebastian",
+                "amount": 10000
+            },
+            "esperando": {
+                "name": "carlos"
+            },
+            "nota": {
+                "razon": "otro ejemplo",
+                "fecha": "2022-05-20"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 6,
+        "compromiso": {
+            "invoice": 12,
+            "debe": {
+                "name": "karen",
+                "amount": 10000
+            },
+            "esperando": {
+                "name": "carlos"
+            },
+            "nota": {
+                "razon": "otra nota",
+                "fecha": "2022-05-20"
+            },
+            "status": "saldado"
+        }
     }
 ]
