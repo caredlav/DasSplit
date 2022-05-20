@@ -37,7 +37,7 @@ const homeController = {
             let userFound= userModel.findUser(userData);
             if(userFound!=null){
             req.session.user=userFound;                      
-            res.redirect("/");
+            res.redirect("/profile");
             }else{
             res.render("login",{errors: {msg: "El correo o la contraseña están erróneos. Por favor, vuelva a intentarlo."}});
         }  
@@ -66,8 +66,8 @@ const homeController = {
            }
             
             const info= await trasnporter.sendMail(message);
-            console.log("mensaje sent",info.messageId);
-            res.send("Enviado");
+            // console.log("mensaje sent",info.messageId);
+            res.render("userDetail");
         } catch (error) {
             res.status(500).send(error.message);
         }

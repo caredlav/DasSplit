@@ -4,6 +4,8 @@ const currentDB = JSON.parse(fs.readFileSync(path.resolve(__dirname,"./users.jso
 const currentPaysDB= JSON.parse(fs.readFileSync(path.resolve(__dirname,"./pays.json")),"utf-8");
 const bcryptjs=require('bcryptjs');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+const env=process.env;
 
 const newId = () => {
 	let ultimo = 0;
@@ -52,12 +54,12 @@ const userModel={
     },
     sharingAccount: (userData,userInv)=>{
         const trasnporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
+            host: env.HOST,
+            port: env.PORT,
             secure: true,
             auth: {
-                user: 'caredlav@gmail.com',
-                pass: 'mowvlxmholopjdtl'
+                user: env.USER,
+                pass: env.PASS
             }
         });        
         let userToUpdate= currentDB.filter(user=>user.email==userData.email)[0];
@@ -168,7 +170,7 @@ const userModel={
         return currentDB.filter(users=>users.id==info.id)[0];
     },
     checkEmailIfExist: (info)=>{
-        return currentDB.filter(user=>user.email==info.email)[0].email;
+        return currentDB.filter(user=>user.email==info.email)[0];
     }
 }
 

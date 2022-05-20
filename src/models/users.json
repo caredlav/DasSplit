@@ -73,5 +73,31 @@
                 "amount": 0
             }
         }
+    },
+    {
+        "id": 6,
+        "name": "karen",
+        "lastName": "romero",
+        "email": "karen@gmail.com",
+        "pass": "$2a$12$W6FOFev7RxFsXJKi6Y49FemmG3TTASgMOlFBVFJMqaeCvPKdy8Q7S",
+        "limitInv": 0,
+        "usersInv": [
+            "jason",
+            "carlos"
+        ],
+        "funds": {
+            "user1": {
+                "name": "karen",
+                "amount": 0
+            },
+            "user2": {
+                "name": "jason",
+                "amount": 0
+            },
+            "user3": {
+                "name": "carlos",
+                "amount": 0
+            }
+        }
     }
 ]
