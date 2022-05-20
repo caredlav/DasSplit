@@ -3,12 +3,75 @@
         "id": 1,
         "name": "carlos",
         "email": "caredlav@gmail.com",
-        "pass": "celo"
+        "pass": "celo",
+        "limitInv": 2,
+        "usersInv": [
+            "pedro",
+            "luis"
+        ],
+        "funds": {
+            "user1": {
+                "name": "carlos",
+                "amount": 0
+            },
+            "user2": {
+                "name": "pedro",
+                "amount": 0
+            },
+            "user3": {
+                "name": "luis",
+                "amount": 0
+            }
+        }
     },
     {
         "id": 2,
         "name": "car",
         "email": "carlosr@hotmail.com",
         "pass": "sad"
+    },
+    {
+        "id": 3,
+        "name": "luis",
+        "email": "luis@hotmail.com",
+        "pass": "$2a$12$A.JZ4UYSm7qyTIe9O7uP1eqPcMOLK3c/uBSoNSmdohKg6jt4t5NUG"
+    },
+    {
+        "id": 4,
+        "name": "jason",
+        "lastName": "smith",
+        "email": "jasons@hotmail.com",
+        "pass": "$2a$12$nAod5k4G2uOlrT.CLwlldutWcWU/8VIFzXFhsBzoMuSCyz5XsScXi",
+        "limitInv": 0,
+        "usersInv": [
+            "carlos",
+            "mac"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "seba",
+        "lastName": "orteg",
+        "email": "karenr@hotmail.com",
+        "pass": "$2a$12$ZkkRXQeof6mgjVy59zpkzuKoH6fkGKFuCnnb5wN/oDtFzZS0PLDLK",
+        "limitInv": 0,
+        "usersInv": [
+            "mac",
+            "mac 1"
+        ],
+        "funds": {
+            "user1": {
+                "name": "seba",
+                "amount": 0
+            },
+            "user2": {
+                "name": "mac",
+                "amount": 0
+            },
+            "user3": {
+                "name": "mac 1",
+                "amount": 0
+            }
+        }
     }
 ]

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head',{title: 'Dashboard - DasSplit'}) %> 
+
+<body class="admPayment-body">
+    <a href="/logout/" class="btn-logout">Cerrar sesión</a>
+    <a href="/profile">Volver</a>
+    <h3>Bienvenido al Dashboard</h3>    
+    <% if (Object.keys(users.funds).length==1) { %>
+        <div>   
+            <% if (users.funds.user1.amount<0) { %>
+                <label>El usuario <%= users.funds.user1.name %> tiene una deuda de $<%= -1*users.funds.user1.amount %> pesos.</label>            
+            <% }else{ %>     
+                <label>El usuario <%= users.funds.user1.name %> esta sin deuda.</label>
+            <% } %> 
+        </div>
+    <% } %> 
+    <% if (Object.keys(users.funds).length==2) { %>
+        <div>   
+            <% if (users.funds.user1.amount<0) { %>
+                <label>El usuario <%= users.funds.user1.name %> tiene una deuda de $<%= -1*users.funds.user1.amount %> pesos.</label>            
+            <% }else{ %>     
+                <label>El usuario <%= users.funds.user1.name %> esta sin deuda.</label>
+            <% } %> 
+        </div>
+        <div>   
+            <% if (users.funds.user2.amount<0) { %>
+                <label>El usuario <%= users.funds.user2.name %> tiene una deuda de $<%= -1*users.funds.user2.amount %> pesos.</label>            
+            <% }else{ %>     
+                <label>El usuario: <%= users.funds.user2.name %> esta sin deuda.</label>
+            <% } %> 
+        </div>
+    <% } %> 
+    <% if (Object.keys(users.funds).length==3) { %>
+        <div>   
+            <% if (users.funds.user1.amount<0) { %>
+                <label>El usuario <%= users.funds.user1.name %> tiene una deuda de $<%= -1*users.funds.user1.amount %> pesos.</label>            
+            <% }else{ %>     
+                <label>El usuario <%= users.funds.user1.name %> esta sin deuda.</label>
+            <% } %> 
+        </div>
+        <div>   
+            <% if (users.funds.user2.amount<0) { %>
+                <label>El usuario <%= users.funds.user2.name %> tiene una deuda de $<%= -1*users.funds.user2.amount %> pesos.</label>            
+            <% }else{ %>     
+                <label>El usuario: <%= users.funds.user2.name %> esta sin deuda.</label>
+            <% } %> 
+        </div>
+        <div>   
+            <% if (users.funds.user3.amount<0) { %>
+                <label>El usuario <%= users.funds.user3.name %> tiene una deuda de $<%= -1*users.funds.user3.amount %> pesos.</label>            
+            <% }else{ %>     
+                <label>El usuario <%= users.funds.user3.name %> esta sin deuda.</label>
+            <% } %> 
+        </div>
+    <% } %> 
+    <a href="/profile/dashboard/crear-cuenta">Genere una nueva deuda</a>     
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Invoice</th>
+                <th scope="col">Debedor</th>
+                <th scope="col">Esperando el pago</th>
+                <th scope="col">Nota</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Estado</th>            
+            </tr>
+        </thead>
+        <tbody>
+            <% pays.forEach(pays => { %>
+             <tr class="primer-item">
+                <td><%= pays.compromiso.invoice %> </td>
+                <td><%= pays.compromiso.debe.name %> debe <%= pays.compromiso.debe.amount %> </td>
+                <td><%= pays.compromiso.esperando.name %> </td>
+                <td><%= pays.compromiso.nota.razon %> </td>
+                <td><%= pays.compromiso.nota.fecha %> </td>
+                <% if (pays.compromiso.status==='pendiente') { %>
+                    <td><%= pays.compromiso.status %> / <a href="/profile/dashboard/pagar-cuenta/<%= pays.compromiso.invoice %>">Pagar</a></td> 
+                <% }else{ %>
+                    <td><%= pays.compromiso.status %></td>  
+                <% } %>                                  
+            </tr>
+            <% }) %>                                                   
+        </tbody>
+    </table>
+</body>
+</html>

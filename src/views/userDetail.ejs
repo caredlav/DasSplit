@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head',{title: 'Perfil - DasSplit'}) %> 
+
+<body class="profile-body">
+    <a href="/logout/" class="btn-logout">Cerrar sesión</a>
+    <h1>¡Bienvenido(s)!</h1>
+    <% if (locals.userLogged && Object.keys(userLogged.funds).length==1) { %>
+     <label class="usersUsingAccount"><%= userLogged.name %> esta usando esta cuenta.</label>
+    <% }else if(locals.userLogged && Object.keys(userLogged.funds).length==2){ %>
+        <label class="usersUsingAccount"><%= userLogged.name %> y <%= userLogged.funds.user2.name %> estan usando esta cuenta.</label>
+    <% }else{ %> 
+        <label class="usersUsingAccount"><%= userLogged.name %>, <%= userLogged.funds.user2.name %> y <%= userLogged.funds.user3.name %> estan usando esta cuenta.</label>
+    <% } %> 
+    <a href="/profile/dashboard" class="hipervin-profile">Empezar a administrar los pagos</a> 
+    <% if (locals.userLogged && locals.userLogged.limitInv==0) { %>
+     <h4>Se lleno el cupo para invitar otros usuarios.</h4>
+    <% }else{ %>
+      <h4>Añade otro usuario para compartir la cuenta (máximo 2 personas para añadir).</h4>
+    <form action="/user" method="post" class="form-inv-user">
+        <label for="name">Nombre de la persona</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Dirección de correo electrónico</label>
+        <input type="text" id="email" name="email">
+        <button type="submit">Enviar invitación</button>
+    </form>  
+    <% } %>    
+</body>
+</html>

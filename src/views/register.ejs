@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Register - DasSplit</title>
-</head>
-<body>
-    <h2>Registro</h2>
-    <form action="/registro" method="post">
+
+    <%- include('partials/head',{title: 'Registro - DasSplit'}) %>
+    
+<body class="register-body">
+    <a href="/">Volver</a>
+    <h2>Registro</h2>      
+    <form action="/registro" method="post" class="form-register">
         <label for="name">Nombre</label>
-        <input type="text" id="name" name="userName">
+        <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>">
+        <div>
+            <h3><%= locals.errors && errors.name ? errors.name.msg : null %> </h3>
+        </div>
+        <label for="lastName">Apellido</label>
+        <input type="text" id="lastName" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
+        <div>
+            <h3><%= locals.errors && errors.lastName ? errors.lastName.msg : null %> </h3>
+        </div>
         <label for="email">Correo electrónico</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+        <div>
+            <h3> <%= locals.errors && errors.email ? errors.email.msg : null %> </h3>
+            <%if(typeof (locals.errors && errors.msg) !='undefined' ){ %>
+                <h3><%= errors.msg %></h3>
+                <% } %>
+        </div>
         <label for="pass">Contraseña</label>
         <input type="password" id="pass" name="pass">
+        <div>
+            <h3> <%= locals.errors && errors.pass ? errors.pass.msg : null %> </h3>
+        </div>
         <label for="confirmPass">Confirmar contraseña</label>
         <input type="password" id="confirmPass" name="confirmPass">
         <div>
+            <h3> <%= locals.errors && errors.confirmPass ? errors.confirmPass.msg : null %> </h3>
+        </div>
+        <div class="btn-container-register">
             <button type="submit">Registarse</button>
-            <button type="reset">Limpiar campos</button>
         </div>
     </form>
 </body>

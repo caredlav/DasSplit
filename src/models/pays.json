@@ -1,0 +1,124 @@
+[
+    {
+        "idUser": 0,
+        "compromiso": {
+            "invoice": 1,
+            "debe": {
+                "name": "carlos",
+                "amount": 50000
+            },
+            "esperando": {
+                "name": "mac"
+            },
+            "nota": {
+                "razon": "pag",
+                "fecha": "20/02/2022 12:00pm"
+            },
+            "status": "pendiente"
+        }
+    },
+    {
+        "accountID": 3,
+        "compromiso": {
+            "debe": {
+                "name": "Carlos",
+                "amount": "121212"
+            },
+            "esperando": {
+                "name": "Carlos"
+            },
+            "nota": {
+                "razon": "sad",
+                "fecha": "2022-05-12"
+            }
+        }
+    },
+    {
+        "accountID": 3,
+        "compromiso": {
+            "debe": {
+                "name": "Mac",
+                "amount": "3000"
+            },
+            "esperando": {
+                "name": "Mac2"
+            },
+            "nota": {
+                "razon": "asd",
+                "fecha": "2022-05-12"
+            }
+        }
+    },
+    {
+        "accountID": 5,
+        "compromiso": {
+            "invoice": 3,
+            "debe": {
+                "name": "seba",
+                "amount": 20000
+            },
+            "esperando": {
+                "name": "mac"
+            },
+            "nota": {
+                "razon": "ejemplo",
+                "fecha": "2022-05-18"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 5,
+        "compromiso": {
+            "invoice": 4,
+            "debe": {
+                "name": "mac",
+                "amount": 100
+            },
+            "esperando": {
+                "name": "seba"
+            },
+            "nota": {
+                "razon": "Pago de pizza. Mac y mac 1 me deben.",
+                "fecha": "2022-05-18"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 5,
+        "compromiso": {
+            "invoice": 5,
+            "debe": {
+                "name": "mac 1",
+                "amount": 100
+            },
+            "esperando": {
+                "name": "seba"
+            },
+            "nota": {
+                "razon": "Pago de pizza. Mac y mac 1 me deben.",
+                "fecha": "2022-05-18"
+            },
+            "status": "saldado"
+        }
+    },
+    {
+        "accountID": 5,
+        "compromiso": {
+            "invoice": 6,
+            "debe": {
+                "name": "seba",
+                "amount": 25
+            },
+            "esperando": {
+                "name": "mac 1"
+            },
+            "nota": {
+                "razon": "ejemplo",
+                "fecha": "2022-05-19"
+            },
+            "status": "saldado"
+        }
+    }
+]

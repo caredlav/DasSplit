@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Home - DasSplit</title>
-</head>
-<body>
-    <h1>Bienvenido a DasSplit</h1>
-    <a href="/registro">Registarse</a>
-    <a href="/login">Login</a>
+
+<%- include('partials/head',{title: 'Home - DasSplit'}) %>
+
+<body class="home-body">
+    <div class="btn-container">
+        <button><a href="/registro">Registarse</a></button>
+        <button><a href="/login">Login</a></button>  
+    </div>         
+    <div class="logo-container">
+        <img src="/img/logo.png" alt="logo">
+    </div>       
 </body>
 </html>

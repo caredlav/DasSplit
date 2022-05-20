@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head',{title: 'Pagar deuda - DasSplit'}) %>
+
+<body class="pay-due-body">
+    <a href="/logout/" class="btn-logout">Cerrar sesión</a>
+    <a href="/profile/dashboard/">Volver</a>
+    <h2>Complete el pago respectivo</h2>
+    <form action="/profile/dashboard/pagar-cuenta/<%= due.compromiso.invoice %> " method="post" class="form-pay-due">
+    <label>N° comprobante</label>
+    <input type="number" value="<%= due.compromiso.invoice %>" name="invoice">
+    <label>Persona quien debe</label>
+    <input type="text" value="<%= due.compromiso.debe.name %>" name="debedor">
+    <label>Cantidad en deuda</label>
+    <input type="number" value="<%= due.compromiso.debe.amount %>" name="amount">
+    <label>Coloque la cantidad a saldar (puede ser el total o parcial)</label>
+    <input type="number" name="pago" required>  
+    <button type="submit">Cargar</button>
+    </form>    
+</body>
+</html>

@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(243 237 237);
+}
+
+.home-body .btn-container{
+    text-align: center;
+    margin: 1em;
+}
+
+.home-body button{
+    border: 1px black solid;
+    border-radius: 1rem;
+    background-color: azure;
+    padding: 1rem;
+}
+
+.home-body a{
+    text-decoration: none;
+}
+
+.home-body .logo-container{
+    text-align: center;
+    margin: 1em;
+}
+
+.register-body h2{ 
+    text-align: center;
+    margin: 1em;
+    font-size: 2rem;
+    color: coral;
+}
+
+.register-body h3{
+    color: red;
+}
+
+.register-body .form-register{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+    width: 50vw;
+    border: black solid 1px;
+    border-radius: 1rem;
+    position: relative;
+    left: 20rem;
+    background-color: slategray;
+}
+
+.register-body .form-register label{
+    font-size: 22px;
+}
+
+.register-body .form-register input{
+    width: 43vw;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.register-body .form-register .btn-container-register{
+    margin: 15px;
+}
+
+.register-body .form-register .btn-container-register button{
+    border-radius: 2rem;
+    padding: 9px;
+    cursor: pointer;
+    color:darkorange;
+    background-color: cornsilk;
+}
+
+.login-body h2{
+    text-align: center;
+    margin: 1em;
+    font-size: 2rem;
+    color: coral;
+}
+
+.login-body h3{
+    color: red;
+}
+
+.login-body .form-login{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+    width: 50vw;
+    border: black solid 1px;
+    border-radius: 1rem;
+    position: relative;
+    left: 20rem;
+    background-color: slategray;
+}
+
+.login-body .form-login label{
+    font-size: 22px;
+}
+
+.login-body .form-login input{
+    width: 43vw;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.login-body .form-login .btn-container-login{
+    margin: 15px;
+}
+
+.login-body .form-login .btn-container-login button{
+    border-radius: 2rem;
+    padding: 9px;
+    cursor: pointer;
+    color:darkorange;
+    background-color: cornsilk;
+    margin-left: 27px;
+}
+
+.login-body .form-login .btn-container-login a{
+    color: black;
+    display: block;
+}
+
+.profile-body h1{
+    margin: 1rem;
+    font-size: 3em;
+    color: #992323;
+}
+
+.profile-body .usersUsingAccount{
+    margin-left: 10px;
+}
+
+.profile-body .hipervin-profile{
+    margin: 32px;
+    color: cornflowerblue;
+    font-size: 24px;
+}
+
+.profile-body h4{
+    margin: 1rem;
+    font-size: 2rem;
+    color: #000000bd;
+}
+
+.profile-body .form-inv-user{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 14px;
+    width: 66vw;
+    background-color: antiquewhite;
+}
+
+.profile-body .form-inv-user input{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.profile-body .form-inv-user button{
+    padding: 4px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.admPayment-body h3{
+    text-align: center;
+    font-size: 2em;
+    color: crimson;
+    margin: 1rem;
+}
+
+.newDue-body .form-newPay{
+    margin: 1rem;
+    padding: 1rem;
+    width: 29vw;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    position: relative;
+    left: 29rem;
+}
+
+.newDue-body h2{
+    text-align: center;
+    color: #0000af;
+    margin: 1rem;
+}
+
+.newDue-body .form-newPay h5{
+    margin: 2px;
+}
+
+.newDue-body .form-newPay input{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.newDue-body .form-newPay select{
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.newDue-body .form-newPay textarea{
+    border-radius: 10px;
+    resize: none;
+    height: 10vh;
+    padding: 12px;
+}
+
+.newDue-body .form-newPay .input-date{
+    position: relative;
+    bottom: 21px;
+}
+
+.newDue-body .form-newPay .btn-container-adm-pay{
+    text-align: center;
+    margin: 10px;
+}
+
+.newDue-body .form-newPay button{
+    padding: 4px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.newDue-body .errors-newPayDue{
+    text-align: center;
+    color: red;
+}
+
+.admPayment-body table {
+    font-size: 1rem;
+    width: 95%;
+    position: relative;
+    left: 2rem;
+  }
+  
+  .admPayment-body table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background: white;
+  }
+  .admPayment-body th, td {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .admPayment-body .table tbody tr td a:visited{
+      color: rgb(32, 146, 146);
+  }
+
+.pay-due-body h2{
+    text-align: center;
+    margin: 1rem;
+}
+
+.pay-due-body .form-pay-due{
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 1rem;
+    display: grid;
+    background-color: khaki;
+    position: relative;
+    top: 1rem;
+    left: 33rem;
+    width: 18vw;
+}
+
+.pay-due-body .form-pay-due label{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.pay-due-body .form-pay-due input{
+    width: 9vw;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.pay-due-body .form-pay-due button{
+    width: 15vw;
+    margin-top: 10px;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-logout{
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+    top: 12px;
+    left: 65rem;
+    color: black;
+    background-color: azure;
+}

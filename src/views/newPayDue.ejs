@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head',{title: 'Crear nueva cuenta - DasSplit'}) %> 
+
+<body class="newDue-body">    
+    <a href="/logout/" class="btn-logout">Cerrar sesión</a>
+    <a href="/profile/dashboard">Volver</a>
+    <h2>Creación de nueva cuenta</h2>
+    <form action="/profile/dashboard/crear-cuenta" method="post" class="form-newPay">
+        <h5>Seleccione el individuo que debe y la cantidad:</h5>
+        <select name="userOwes">
+            <option ></option>
+            <option value="<%= users.name %>" <%= locals.oldData && (oldData.userOwes===users.name) ? 'selected' : null %> ><%= users.name %></option>
+            <option value="<%= users.usersInv[0] %>" <%= locals.oldData && (oldData.userOwes===users.usersInv[0]) ? 'selected' : null %>><%= users.usersInv[0] %></option>
+            <option value="<%= users.usersInv[1] %>" <%= locals.oldData && (oldData.userOwes===users.usersInv[1]) ? 'selected' : null %>><%= users.usersInv[1] %></option>
+        </select>
+        <input type="number" name="amount" value="<%= locals.oldData ? oldData.amount : null %>">
+        <h5>Seleccione el individuo que espera el pago</h5>
+        <select name="userWaiting">
+            <option selected></option>
+            <option value="<%= users.name %>" <%= locals.oldData && (oldData.userWaiting===users.name) ? 'selected' : null %>><%= users.name %></option>
+            <option value="<%= users.usersInv[0] %>" <%= locals.oldData && (oldData.userWaiting===users.usersInv[0]) ? 'selected' : null %>><%= users.usersInv[0] %></option>
+            <option value="<%= users.usersInv[1] %>" <%= locals.oldData && (oldData.userWaiting===users.usersInv[1]) ? 'selected' : null %>><%= users.usersInv[1] %></option>
+        </select>
+        <h5>Coloque una nota o descripcion del pago y fecha respectiva</h5>
+        <textarea name="note"><%= locals.oldData ? oldData.note : null %></textarea>
+        <input type="date" name="date" class="input-date">
+        <div class="btn-container-adm-pay">
+            <button type="submit">Cargar</button>
+        </div>       
+    </form>   
+    <div class="errors-newPayDue">
+        <h3><%= locals.errors && errors.userOwes ? errors.userOwes.msg : null %></h3>
+        <h3><%= locals.errors && errors.amount ? errors.amount.msg : null %></h3>
+        <h3><%= locals.errors && errors.userWaiting ? errors.userWaiting.msg : null %></h3>
+        <h3><%= locals.errors && errors.note ? errors.note.msg : null %></h3>
+        <h3><%= locals.errors && errors.date ? errors.date.msg : null %></h3>
+    </div>
+</body>
+</html>
